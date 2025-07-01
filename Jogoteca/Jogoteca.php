@@ -1,13 +1,5 @@
 <?php
-$host = "localhost";
-$usuario = "root";
-$senha = "";
-$banco = "jogoteca";
-
-$conexao = new mysqli($host, $usuario, $senha, $banco);
-if ($conexao->connect_error) {
-    die("Erro de conexão: " . $conexao->connect_error);
-}
+include 'conexao.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['salvar'])) {
   $titulo = $_POST['titulo'];
